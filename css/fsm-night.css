@@ -1,0 +1,62 @@
+body {
+	background-color: black;
+}
+
+.vert-grad {
+	background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#111111, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#111111, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#111111, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#111111, black); /* Standard syntax (must be last) */
+}
+.vert-bg {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+#canvas {
+	background-color: white;
+	border-color: black;
+}
+
+h1 {
+	color : white;
+	text-shadow: 1px 1px #888888;
+}
+
+h2 {
+	color: #dddddd;
+	text-shadow: 1px 1px #666666;
+}
+
+h3 {
+	color: white;
+	text-shadow: none;
+}
+
+.title-button {
+	background-color: black;
+	border-color: transparent;
+}
+.title-button:hover {
+	background-color: white;
+	border-color: white;
+}
+
+#settings div {
+	background-color: white;
+	border-color: white;
+}
+#settings:hover div, #settings:hover div {
+	background-color: black;
+	border-color: black;
+}
+#settings:active:hover div {
+	border-color: white;
+}
+
+#night h1 {
+	color: white;
+}
+#night:hover h1 {
+  color: black;
+}

@@ -1,0 +1,346 @@
+body {
+	margin: 0px;
+}
+
+.bg {
+	background-color: #eeeeee;
+}
+
+.vert-grad {
+	background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#eeeeee, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#eeeeee, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#eeeeee, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#eeeeee, white); /* Standard syntax (must be last) */
+}
+.vert-bg {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+#outer {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.title-bar {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 100px;
+	margin: 0px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#title {
+	flex-shrink: 0;
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+.title-button {
+	position: fixed;
+	top: 13px;
+	z-index: 4;
+	width: 70px;
+	height: 70px;
+	
+	border-style: solid;
+	border-color: transparent;
+	border-width: 2px;
+	border-radius: 5px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	transition: 0.2s;
+}
+.title-button:hover {
+	border-color: black;
+	background-color: black;
+	transition: 0.5s;
+}
+
+#settings {
+	left: 10px;
+}
+
+#settings div {
+	width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0 3px 0;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 2px;
+	border-color: transparent;
+	transition: 0.2s;
+}
+#settings:hover div {
+	background-color: white;
+	border-color: white;
+	transition: 0.2s;
+}
+#settings:active:hover div {
+	border-color: black;
+}
+
+#night {
+	right: 10px;
+}
+
+#night h1 {
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: black;
+  cursor: default;
+  transition: 0.2s;
+}
+#night:hover h1 {
+  color: white;
+  transition: 0.2s;
+}
+
+#menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	overflow-y: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+#menu {
+	flex-shrink: 0;
+	left: 0;
+	top: 0;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	align-self: flex-start;
+
+	text-align: left;
+
+	//border-right-style: solid;
+	border-width: 3px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.menu-padding:first-child {
+	flex-shrink: 0;
+	width: 0px;
+	height: 100px;
+}
+.menu-padding:last-child {
+	flex-grow: 1;
+	width: 100%;
+	height: 0px;
+}
+
+#menu div {
+	margin-top: -20px;
+}
+#menu #sub-search {
+	margin-top: -10px;
+	margin-bottom: 40px;
+}
+#menu #search {
+	margin-top: -30px;
+	margin-bottom: 40px;
+}
+#menu #sub-search h3, #menu #search h3 {
+	margin-bottom: 5px;
+}
+#sub-search input, #search input {
+	font-size: 14px;
+}
+
+#menu #sort {
+	margin-bottom: 20px;
+}
+#menu #sort div {
+	margin-left: 15px;
+	margin-top: -15px;
+}
+
+#canvas {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 15px;
+	cursor: default;
+}
+
+.canvas-menu {
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	padding: 10px;
+
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+.canvas-menu > div:not(.separator) {
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.canvas-menu > div > div {
+	margin-bottom: 15px;
+}
+
+.separator {
+	height: 1px;
+	width: 100%;
+	align-self: center;
+
+	background-color: black;
+}
+.canvas-menu .separator {
+	display: none;
+	margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1080px){
+	
+}
+
+@media only screen and (max-width: 720px){
+	
+}
+
+h1 {
+	color : black;
+	font-family: Calibri;
+	text-shadow: 1px 1px #dddddd;
+}
+
+h2 {
+	color : #666666;
+	font-family: Calibri;
+	text-shadow: 1px 1px #eeeeee;
+}
+
+h3 {
+	color: black;
+	font-family: Calibri;
+	text-shadow: 1px 1px #eeeeee;
+
+	transition: 0.1s;
+}
+#menu div.sub:hover h3, #menu div#saved:hover h3, #photo-menu div:hover:not(.copy) h3 {
+	font-size: 150%;
+  cursor: pointer;
+}
+#menu #sub-search h3, #menu #search h3, #menu #sort > h3 {
+	font-size: 100%;
+	cursor: default;
+}
+#menu #sort div h3 {
+	font-size: 100%;
+	cursor: pointer;
+}
+#menu #sort div:hover h3 {
+	font-size: 120%;
+}
+#photo-menu h3 {
+	color: white;
+	text-shadow: none;
+}
+
+h5 {
+	color: black;
+	font-family: Calibri;
+	text-shadow: 1px 1px #eeeeee;
+	margin: 0;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.open a:link, .open a:visited {
+  text-decoration: none;
+}
+a:link:active, a:visited:active {
+  color: #dddddd;
+}
+
+p {
+	font-family: Calibri;
+	margin: 0px;
+}
+
+#loading {
+	display: none;
+}
+
+.alert {
+	z-index: 200;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	display: none;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+}
+
+.alert-content {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 5px;
+}
+.alert-content h2 {
+	color: white;
+	margin: 0;
+}

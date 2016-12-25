@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FSM</title>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script> -->
+		<script src='js/utils.js'></script>
+		<script src='js/page.js'></script>
+		<script src='js/node.js'></script>
+		<script src='js/edge.js'></script>
+    <script src='js/latex.js'></script>
+		<script src='js/fsm.js'></script>
+		<link rel='stylesheet' type='text/css' href='css/fsm.css'>
+    </head>
+	<body>
+		<div id='outer'>
+
+			<div class='title-bar vert-grad'>
+				<div id='settings' class='title-button'>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+				<div>
+					<h1 id='title'>Made By porter plp</h1>
+				</div>
+
+				<div id='night' class='title-button'>
+					<h1>&#9728</h1>
+				</div>
+			</div>
+			<div style='height:100px'></div>
+
+			<div id='menu-container'>
+				<div class='menu-padding'></div>
+				
+				<div id='menu' class='vert-bg'>
+					<div><h3>nikmuph</h3></div>
+					<div><h3>porter plp</h3></div>
+					<div><h3>Brian Will</h3></div>
+				</div>
+
+				<div class='menu-padding vert-bg'></div>
+			</div>
+
+			<div id='canvas-container'>
+				<canvas id='canvas' width='900' height='600'></canvas>
+			</div>
+      <div id='export-container'>
+        <button id='latex' class="center">Export to Latex</button>
+      </div>
+      <div id='latex-container'>
+        <textarea id='textarea' row="50" cols="100" style="display:none"></textarea>
+      </div>
+			<div class='canvas-menu'>
+				<div id='node-menu'>
+					<div>
+						<h5>Node</h5>
+					</div>
+					<div class='radius'>
+						<h5>Radius: 30</h5>
+						<input type='range' min='5' max='50' value='30' step='5'/>
+					</div>
+					<div class='color'>
+						<h5>Color: black</h5>
+						<input type='range' min='0' max='8' value='0' step='1'/>
+					</div>
+					<div class='fill'>
+						<h5>Fill Color: none</h5>
+						<input type='range' min='0' max='8' value='0' step='1'/>
+					</div>
+					<div class='text-color'>
+						<h5>Text Color: black</h5>
+						<input type='range' min='0' max='8' value='0' step='1'/>
+					</div>
+					<div class='font'>
+						<h5>Font Size: 14</h5>
+						<input type='range' min='6' max='28' value='14' step='2'/>
+					</div>
+				</div>
+
+				<div class='separator'></div>
+
+				<div id='edge-menu'>
+					<div>
+						<h5>Edge</h5>
+					</div>
+					<div class='color'>
+						<h5>Color: black</h5>
+						<input type='range' min='0' max='8' value='0' step='1'/>
+					</div>
+					<div class='text-color'>
+						<h5>Text Color: black</h5>
+						<input type='range' min='0' max='8' value='0' step='1'/>
+					</div>
+					<div class='font'>
+						<h5>Font Size: 14</h5>
+						<input type='range' min='6' max='28' value='14' step='2'/>
+					</div>
+					<div class='arrow'>
+						<h5>Arrows: forward</h5>
+						<input type='range' min='0' max='3' value='1' step='1'/>
+					</div>
+				</div>
+			</div>
+
+			<div class='alert'>
+				<div class='alert-content'><h2></h2></div>
+			</div>
+
+		</div>
+	</body>
+</html>
